@@ -21,3 +21,26 @@ Abrir la terminal (WSL2 / PowerShell / Bash) y ejecuta:
 ```bash
 git clone https://github.com/jamescanos/SeminarioLaravel.git
 cd entorno-seminario-laravel
+
+### 2. Estructura Inicial
+Dentro de la carpeta, crea una carpeta llamada src
+```bash
+mkdir src
+```
+
+### 3. Levantar los contenedores
+Ejecutar el siguiente comando en la raíz del proyecto (donde está el docker-compose.yml):
+```bash
+docker-compose up -d
+```
+
+El flag -d significa "detached" (corre en segundo plano). Si se desean ver los logs en vivo, se quita el -d.
+
+### 4. Verificar que todo funciona
+PHP/Apache: Abrir el navegador y acceder a http://localhost:8080. Se debe ver página de información de PHP (phpinfo()).
+phpMyAdmin: Acceder a http://localhost:8081. Usuario: root, Contraseña: root_password.
+Base de datos: conectarse desde phpMyAdmin o desde su código PHP usando:
+   Host: db (el nombre del servicio en el compose)
+   Usuario: root (o dev_user)
+   Contraseña: root_password (o dev_password)
+   Base de datos: seminario_db
