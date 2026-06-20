@@ -1,19 +1,15 @@
 <?php
-// 1. Variables y Strings
-$nombre = "Gustavo";
-$edad = 28;
-$ciudad = "Cartago valle";
-$carrera = "Ingeniería de Sistemas";
-$semestre = 5;
-$materiaFavorita = "Servidores";
+require_once 'POO/Producto.php';
 
-// 2. Concatenación y mostrar en HTML
-echo "<h1>Mi presentación</h1>";
-echo "<p>Hola, soy <strong>$nombre</strong>, tengo $edad años, vivo en $ciudad y estudio $carrera.</p>";
+// Instanciar productos con categoría
+$prod1 = new Producto("Laptop Gamer", 1500, "Electrónica");
+$prod2 = new Producto("Mouse Inalámbrico", 80, "Oficina");
+$prod3 = new Producto("Monitor 4K", 1200, "Electrónica");
 
-// 3. Nueva información solicitada
-echo "<p>Estoy en $semestre semestre y mi materia favorita es $materiaFavorita.</p>";
-
-// 4. Diferencia entre comillas simples y dobles
-echo '<p>Con comillas simples: $nombre no se interpreta</p>';
+echo "<h2>Catálogo POO</h2>";
+echo "<ul>";
+echo "<li>" . $prod1->getInfo() . "</li>";
+echo "<li>" . $prod2->getInfo() . "</li>";
+echo "<li>" . $prod3->getInfo() . "</li>";
+echo "</ul>";
 ?>

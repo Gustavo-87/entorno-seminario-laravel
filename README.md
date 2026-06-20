@@ -197,3 +197,12 @@ Se creó el archivo `src/formulario.php`, implementando un formulario con métod
 
 ![Evidencia formulario.php](src/evidencia_formulario.png)
 
+### Actividad 5: Programación Orientada a Objetos - POO
+
+Se creó la carpeta `src/POO/` y dentro de ella el archivo `Producto.php`, donde se implementó una clase llamada `Producto`.
+
+La clase incluye atributos privados como nombre, precio, IVA y categoría. También se agregó el método `getCategoria()` y se modificó el método `getInfo()` para mostrar la categoría del producto junto con su precio final.
+
+En el archivo `src/index.php` se instanciaron varios objetos de la clase `Producto`, usando categorías como "Electrónica" y "Oficina".
+
+![Evidencia POO](src/evidencia_poo.png)
