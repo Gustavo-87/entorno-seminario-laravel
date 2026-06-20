@@ -113,15 +113,15 @@ Datos principales:
 
 ### Contenedores activos
 
-![Contenedores activos](evidencias/Captura%20CONTENEDORES.png)
+![Contenedores activos](src/contenedores.png)
 
 ### PHP funcionando con phpinfo()
 
-![PHP Info](evidencias/Captura%20PHP%20INF%29.png)
+![PHP Info](src/phpinfo.png)
 
 ### phpMyAdmin funcionando
 
-![phpMyAdmin](evidencias/Captura%20PHPMYADMIN.png)
+![phpMyAdmin](src/phpmyadmin.png)
 
 ## Comandos útiles
 
@@ -162,3 +162,4 @@ El repositorio fue publicado en GitHub con visibilidad pública. También se agr
 ## Conclusión
 
 Se configuró correctamente el entorno inicial de desarrollo. Se verificó Docker, Git y Docker Compose; se levantaron los contenedores de PHP, MariaDB y phpMyAdmin; se ajustaron los puertos para evitar conflictos; se agregaron evidencias de funcionamiento y se publicó el repositorio en GitHub.
+
