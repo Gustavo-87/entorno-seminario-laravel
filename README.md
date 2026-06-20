@@ -300,4 +300,24 @@ También se creó el archivo `src/test_db.php`, el cual permite probar la conexi
 
 ![Evidencia conexión PDO](src/evidencia_test_db.png)
 
+### Actividad 8: Creación del Modelo con CRUD
+
+En esta actividad se creó el modelo `UserModel`, encargado de manejar operaciones básicas sobre la tabla `users`.
+
+El modelo permite:
+
+* Listar todos los usuarios registrados.
+* Obtener un usuario por su ID.
+* Crear un nuevo usuario usando el método `create()`.
+
+Se creó la carpeta `src/models/` y dentro de ella el archivo `UserModel.php`. También se creó el archivo `src/test_model.php` para probar el funcionamiento del modelo desde el navegador.
+
+#### Archivos desarrollados
+
+* `src/models/UserModel.php`
+* `src/test_model.php`
+
+#### Evidencia de funcionamiento
+
+![Evidencia UserModel](src/evidencia_model.png)
 
