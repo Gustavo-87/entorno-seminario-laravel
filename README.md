@@ -283,5 +283,21 @@ Relación:
 categorias.id  →  posts.categoria_id
 ```
 
+### Actividad 7: Conexión PDO con Patrón Singleton
+
+En esta actividad se implementó la conexión a la base de datos usando **PDO** y el patrón **Singleton**, con el objetivo de mantener una única instancia de conexión durante la ejecución de la aplicación.
+
+Se creó la carpeta `src/config/` y dentro de ella el archivo `Database.php`, encargado de centralizar la conexión con la base de datos `seminario_db`.
+
+También se creó el archivo `src/test_db.php`, el cual permite probar la conexión y listar los usuarios almacenados en la tabla `users`.
+
+#### Archivos desarrollados
+
+* `src/config/Database.php`
+* `src/test_db.php`
+
+#### Evidencia de funcionamiento
+
+![Evidencia conexión PDO](src/evidencia_test_db.png)
 
 
