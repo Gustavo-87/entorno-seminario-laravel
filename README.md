@@ -190,3 +190,10 @@ Se creó el archivo `src/funciones.php`, incluyendo la función `esMayorDeEdad($
 * `src/index.php`
 * `src/array_demo.php`
 * `src/funciones.php`
+
+### Actividad 4: Formularios GET y POST
+
+Se creó el archivo `src/formulario.php`, implementando un formulario con método `POST`. El formulario captura nombre, correo electrónico y teléfono. Además, se agregó la validación para verificar que el teléfono no esté vacío y que sea numérico usando `is_numeric()`.
+
+![Evidencia formulario.php](src/evidencia_formulario.png)
+
