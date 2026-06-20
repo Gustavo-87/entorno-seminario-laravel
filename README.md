@@ -163,3 +163,30 @@ El repositorio fue publicado en GitHub con visibilidad pública. También se agr
 
 Se configuró correctamente el entorno inicial de desarrollo. Se verificó Docker, Git y Docker Compose; se levantaron los contenedores de PHP, MariaDB y phpMyAdmin; se ajustaron los puertos para evitar conflictos; se agregaron evidencias de funcionamiento y se publicó el repositorio en GitHub.
 
+## Guía 2 - Introducción a PHP
+
+En esta guía se desarrollaron ejercicios básicos de PHP dentro del entorno Docker configurado para el seminario de Laravel.
+
+### Actividad 1: Variables y Strings
+
+Se modificó el archivo `src/index.php` agregando las variables `$semestre` y `$materiaFavorita`, mostrando el mensaje solicitado en el navegador.
+
+![Evidencia index.php](src/evidencia_index.png)
+
+### Actividad 2: Arrays y Bucles
+
+Se creó el archivo `src/array_demo.php`, donde se trabajó con arrays asociativos, recorrido con `foreach`, cálculo de total y cálculo de IVA del 19%.
+
+![Evidencia array\_demo.php](src/evidencia_array_demo.png)
+
+### Actividad 3: Condicionales y Funciones
+
+Se creó el archivo `src/funciones.php`, incluyendo la función `esMayorDeEdad($edad)` y el recorrido de un array de edades para determinar si cada persona es mayor o menor de edad.
+
+![Evidencia funciones.php](src/evidencia_funciones.png)
+
+### Archivos desarrollados
+
+* `src/index.php`
+* `src/array_demo.php`
+* `src/funciones.php`
