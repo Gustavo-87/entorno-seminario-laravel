@@ -206,3 +206,82 @@ La clase incluye atributos privados como nombre, precio, IVA y categoría. Tambi
 En el archivo `src/index.php` se instanciaron varios objetos de la clase `Producto`, usando categorías como "Electrónica" y "Oficina".
 
 ![Evidencia POO](src/evidencia_poo.png)
+
+### Actividad 6: Diseño de Base de Datos y SQL
+
+En esta actividad se diseñó una base de datos relacional para manejar usuarios, publicaciones y categorías.
+
+Se crearon las siguientes tablas:
+
+* `users`: almacena los usuarios del sistema.
+* `categorias`: almacena las categorías disponibles para clasificar publicaciones.
+* `posts`: almacena las publicaciones y se relaciona con usuarios y categorías.
+
+#### SQL utilizado
+
+```sql
+USE seminario_db;
+
+DROP TABLE IF EXISTS posts;
+DROP TABLE IF EXISTS categorias;
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL
+);
+
+CREATE TABLE categorias (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE posts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(200) NOT NULL,
+    contenido TEXT,
+    user_id INT NOT NULL,
+    categoria_id INT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (categoria_id) REFERENCES categorias(id)
+);
+
+INSERT INTO users (nombre, email) VALUES
+('Carlos Pérez', 'carlos@mail.com'),
+('María Gómez', 'maria@mail.com');
+
+INSERT INTO categorias (nombre) VALUES
+('Tecnología'),
+('Deportes');
+
+INSERT INTO posts (titulo, contenido, user_id, categoria_id) VALUES
+('Mi primer post', 'Contenido del post 1', 1, 1),
+('Segundo post', 'Contenido del post 2', 1, 2),
+('Post de María', 'Hola mundo', 2, 1);
+```
+
+#### Relación entre tablas
+
+La tabla `users` se relaciona con la tabla `posts` mediante el campo `user_id`.
+
+Esto significa que un usuario puede tener muchas publicaciones, pero cada publicación pertenece a un solo usuario.
+
+Relación:
+
+```text
+users.id  →  posts.user_id
+```
+
+La tabla `categorias` se relaciona con la tabla `posts` mediante el campo `categoria_id`.
+
+Esto significa que una categoría puede estar asociada a muchas publicaciones, pero cada publicación pertenece a una sola categoría.
+
+Relación:
+
+```text
+categorias.id  →  posts.categoria_id
+```
+
+
+
