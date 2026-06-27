@@ -36,5 +36,12 @@ class UserModel {
 
         return $stmt->execute();
     }
+    public function delete($id) {
+    $sql = "DELETE FROM users WHERE id = :id";
+    $stmt = $this->db->prepare($sql);
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+
+    return $stmt->execute();
+}
 }
 ?>

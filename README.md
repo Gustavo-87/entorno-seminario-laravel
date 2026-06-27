@@ -358,4 +358,81 @@ se muestra la lista de usuarios almacenados en la base de datos.
 
 ![Evidencia conexión PDO](src/evidencia_test_db1.png)
 
+### Bloque 10: Vistas y entrega final
+
+En este bloque se implementaron las vistas de la aplicación para listar y crear usuarios, aplicando una estructura básica tipo MVC.
+
+Se creó la carpeta:
+
+```text
+src/views/users/
+```
+
+Dentro de esta carpeta se agregaron las siguientes vistas:
+
+- `index.php`: muestra la lista de usuarios registrados en una tabla.
+- `create.php`: muestra el formulario para crear un nuevo usuario.
+
+También se creó el controlador:
+
+```text
+src/controllers/UserController.php
+```
+
+Este controlador se encarga de recibir las acciones del usuario y comunicarse con el modelo `UserModel`.
+
+El archivo principal:
+
+```text
+src/index.php
+```
+
+funciona como Front Controller, es decir, recibe la acción por la URL y decide qué método ejecutar.
+
+#### Acciones implementadas
+
+```text
+index  → lista los usuarios
+create → muestra el formulario y guarda nuevos usuarios
+delete → elimina usuarios
+```
+
+#### Estructura MVC construida
+
+```text
+Modelo:
+src/models/UserModel.php
+
+Controlador:
+src/controllers/UserController.php
+
+Vistas:
+src/views/users/index.php
+src/views/users/create.php
+
+Entrada principal:
+src/index.php
+```
+
+#### Funcionamiento
+
+Al ingresar a:
+
+```text
+http://localhost:8082/index.php
+```
+
+se muestra la lista de usuarios con Bootstrap.
+
+Desde allí se puede:
+
+- Crear un nuevo usuario.
+- Ver el mensaje `Usuario creado exitosamente`.
+- Eliminar usuarios registrados.
+
+#### Evidencia de funcionamiento
+
+![Evidencia vistas usuarios](./src/evidencia_vistas.png)
+
+
 

@@ -1,15 +1,22 @@
 <?php
-require_once 'POO/Producto.php';
 
-// Instanciar productos con categoría
-$prod1 = new Producto("Laptop Gamer", 1500, "Electrónica");
-$prod2 = new Producto("Mouse Inalámbrico", 80, "Oficina");
-$prod3 = new Producto("Monitor 4K", 1200, "Electrónica");
+require_once 'controllers/UserController.php';
 
-echo "<h2>Catálogo POO</h2>";
-echo "<ul>";
-echo "<li>" . $prod1->getInfo() . "</li>";
-echo "<li>" . $prod2->getInfo() . "</li>";
-echo "<li>" . $prod3->getInfo() . "</li>";
-echo "</ul>";
-?>
+$controller = new UserController();
+
+$action = $_GET['action'] ?? 'index';
+
+switch ($action) {
+    case 'create':
+        $controller->create();
+        break;
+
+    case 'delete':
+        $controller->delete();
+        break;
+
+    case 'index':
+    default:
+        $controller->index();
+        break;
+}
