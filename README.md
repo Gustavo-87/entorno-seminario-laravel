@@ -321,3 +321,41 @@ Se creó la carpeta `src/models/` y dentro de ella el archivo `UserModel.php`. T
 
 ![Evidencia UserModel](src/evidencia_model.png)
 
+### Actividad: Prueba de conexión PDO con la base de datos
+
+En esta actividad se creó el archivo `src/test_db.php` para probar la conexión a la base de datos usando PDO.
+
+El archivo utiliza la clase `Database.php`, ubicada en `src/config/`, para conectarse a la base de datos `seminario_db` y consultar los usuarios registrados en la tabla `users`.
+
+#### Código utilizado
+
+```php
+<?php
+require_once 'config/Database.php';
+
+$db = Database::getInstance()->getConnection();
+$stmt = $db->query("SELECT * FROM users");
+
+echo "<h2>Usuarios desde PDO</h2>";
+
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    echo "ID: {$row['id']} - Nombre: {$row['nombre']} - Email: {$row['email']}<br>";
+}
+?>
+```
+
+#### Resultado
+
+Al acceder desde el navegador a:
+
+```text
+http://localhost:8082/test_db.php
+```
+
+se muestra la lista de usuarios almacenados en la base de datos.
+
+#### Evidencia de funcionamiento
+
+![Evidencia conexión PDO](src/evidencia_test_db1.png)
+
+
