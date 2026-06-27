@@ -321,7 +321,7 @@ Se creó la carpeta `src/models/` y dentro de ella el archivo `UserModel.php`. T
 
 ![Evidencia UserModel](src/evidencia_model.png)
 
-### Actividad: Prueba de conexión PDO con la base de datos
+### Actividad 9: Prueba de conexión PDO con la base de datos
 
 En esta actividad se creó el archivo `src/test_db.php` para probar la conexión a la base de datos usando PDO.
 
