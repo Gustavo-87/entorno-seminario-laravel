@@ -453,7 +453,7 @@ Estos comandos permiten comprobar que el entorno cuenta con las herramientas nec
 
 **Evidencia:**
 
-![Captura 1 - PHP y Composer](src/evidencia version php y composer.png)
+![semana2](src/semana2/evidencia version php y composer.png)
 
 ### 2. Estructura del proyecto Laravel
 
@@ -488,7 +488,7 @@ README.md
 
 **Evidencia:**
 
-![Captura 2 - Estructura del proyecto](src/evidencia estructura laravel .png)
+![semana2](src/semana2/evidencia estructura laravel .png)
 
 ### 3. Ejecución del proyecto Laravel
 
@@ -502,7 +502,7 @@ http://localhost:8000
 
 **Evidencia:**
 
-![Captura 3 - Pantalla de bienvenida Laravel](src/evidencia bienvenida laravel.png)
+![semana2](src/semana2/evidencia bienvenida laravel.png)
 
 ### 4. Archivos excluidos del repositorio
 
